@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body {
+      background-image:
+        radial-gradient(ellipse at 15% 20%, #f5d5d5 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 80%, #ffe8e0 0%, transparent 50%);
+    }
+    .ornament {
+      font-size: 1.8rem;
+      color: var(--accent-soft);
+      letter-spacing: 0.3em;
+      display: block;
+      margin: 0.5rem 0 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-box">
+      <div class="login-logo">🌸</div>
+      <h1>Student Tracker</h1>
+      <p class="tagline">Track your expenses with grace</p>
+      <span class="ornament">— ✦ —</span>
+
+      {{MESSAGE}}
+
+      <form method="POST" action="/login">
+        <div class="form-group">
+          <label for="student_name">Your Name</label>
+          <input
+            type="text"
+            id="student_name"
+            name="student_name"
+            placeholder="Enter your full name…"
+            autocomplete="name"
+            required
+          />
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Enter Dashboard</button>
+        </div>
+      </form>
+
+      <div class="divider"></div>
+      <p style="font-size:0.88rem; font-style:italic; color:var(--brown-light);">
+        A personal expense journal for students
+      </p>
+    </div>
+  </div>
+</body>
+</html>

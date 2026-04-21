@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .welcome-hero {
+      text-align: center;
+      padding: 3rem 0 1rem;
+    }
+    .welcome-hero .greeting {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--brown-light);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.04em;
+    }
+    .welcome-hero .student-name {
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--brown);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+    .welcome-hero .ornament {
+      color: var(--accent-soft);
+      font-size: 1.4rem;
+      letter-spacing: 0.4em;
+      margin: 0.6rem 0 2rem;
+      display: block;
+    }
+    .action-btn form { margin: 0; }
+  </style>
+</head>
+<body>
+  {{WELCOME}}
+
+  <div class="page-wrapper">
+    <div class="welcome-hero">
+      <p class="greeting">Welcome back,</p>
+      <h1 class="student-name">{{STUDENT_NAME}}</h1>
+      <span class="ornament">✦ ✦ ✦</span>
+    </div>
+
+    {{MESSAGE}}
+
+    <div class="action-grid">
+      <!-- Add Expense -->
+      <a href="/expense" class="action-btn">
+        <span class="icon">🧾</span>
+        <span class="label">Add Expense</span>
+        <span class="sub">Log a new item</span>
+      </a>
+
+      <!-- View History -->
+      <a href="/history" class="action-btn">
+        <span class="icon">📋</span>
+        <span class="label">History</span>
+        <span class="sub">Browse all entries</span>
+      </a>
+
+      <!-- View Bill -->
+      <a href="/bill" class="action-btn">
+        <span class="icon">💰</span>
+        <span class="label">View Bill</span>
+        <span class="sub">See total summary</span>
+      </a>
+    </div>
+
+    <p style="text-align:center; margin-top:3rem; font-style:italic; font-size:0.92rem; color:var(--brown-light);">
+      All expenses are saved to your current session.
+    </p>
+  </div>
+</body>
+</html>

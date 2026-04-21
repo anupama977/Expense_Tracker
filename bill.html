@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    @media print {
+      .top-bar, .breadcrumb, .no-print { display: none !important; }
+      body { background: white; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
+    }
+    .print-btn {
+      background: transparent;
+      color: var(--brown-mid);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.4rem;
+      border-radius: 30px;
+      font-family: var(--font);
+      font-size: 0.92rem;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: all 0.18s;
+    }
+    .print-btn:hover { background: var(--bg-deep); }
+  </style>
+</head>
+<body>
+  {{WELCOME}}
+
+  <div class="page-wrapper">
+    <p class="breadcrumb"><a href="/">← Home</a> / Total Bill</p>
+
+    <h1 class="page-title">Total Bill</h1>
+    <p class="page-subtitle">Your complete expense summary</p>
+
+    {{MESSAGE}}
+
+    <div class="card">
+      <h2 style="display:flex; justify-content:space-between; align-items:center;">
+        <span>Itemised Statement</span>
+        <button class="print-btn no-print" onclick="window.print()">🖨 Print</button>
+      </h2>
+      {{BILL}}
+    </div>
+
+    <div style="text-align:center; margin-top:1.5rem;" class="no-print">
+      <a href="/expense" class="btn-primary">+ Add More Expenses</a>
+    </div>
+  </div>
+</body>
+</html>

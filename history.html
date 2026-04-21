@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  {{WELCOME}}
+
+  <div class="page-wrapper">
+    <p class="breadcrumb"><a href="/">← Home</a> / Expense History</p>
+
+    <h1 class="page-title">Expense History</h1>
+    <p class="page-subtitle">All your recorded entries</p>
+
+    {{MESSAGE}}
+
+    <div class="card">
+      <h2>All Expenses</h2>
+      {{EXPENSE_LIST}}
+    </div>
+
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a href="/expense" class="btn-primary">+ Add New Expense</a>
+    </div>
+  </div>
+</body>
+</html>
